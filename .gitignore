@@ -1,0 +1,66 @@
+# First exclude everything
+*
+*/*
+
+# Track shell scripts
+!*.sh
+
+# Track documentation
+!*.md
+!docs/
+!docs/*
+!*.cong
+!*.readme
+!*LICENSE
+
+# # Track only directories containing .gitkeep up to depth 3
+# !*/
+# !*/*/
+# !*/*/*/
+# !*/.gitkeep
+# !*/*/.gitkeep
+# !*/*/*/.gitkeep
+# # Ignore everything deeper than 3 levels
+# /*/*/*/*/*
+
+
+# Track all directories to allow deep traversal
+!*/
+# Track only directories containing .gitkeep (at any depth)
+!**/.gitkeep
+
+# Track directory structure with .gitkeep files
+# !**/
+# !.gitkeep
+
+
+# Track specific directories
+# !backups/
+# !logs/
+# !config/
+# !temp/
+
+# But exclude contents of these directories except .gitkeep
+# backups/*
+# !backups/.gitkeep
+# logs/*
+# !logs/.gitkeep
+# config/*
+# !config/.gitkeep
+# temp/*
+# !temp/.gitkeep
+
+# Include .gitignore itself
+!.gitignore
+
+# Always exclude temp and log files
+*.log
+*.tmp
+*.bak
+
+# Always ignore these patterns regardless of depth
+**/.git/
+**/.vscode/
+**/node_modules/
+**/__pycache__/
+**/globalStorage/
